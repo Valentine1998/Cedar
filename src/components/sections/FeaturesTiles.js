@@ -2,6 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faCalendarCheck, faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 import Image from "../elements/Image";
 
 const propTypes = {
@@ -55,10 +57,10 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div
-                    style={{ fontWeight: "900", color: "white", padding: "8px 10px ", borderRadius: "5px" }}
+                    style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
                     className="features-tiles-item-image mb-16"
                   >
-                    Step 1
+                    <FontAwesomeIcon icon={faCalendarCheck} style={{ fontSize: "50px" }} />
                     {/*<Image
                       src={require("./../../assets/images/feature-tile-icon-01.svg")}
                       alt="Features tile icon 01"
@@ -68,7 +70,8 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Book Your Appointment</h4>
+                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">Step 1</div>
+                  <h4 className="mt-0 pt-0 mb-8">Book Your Appointment</h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat.
@@ -81,20 +84,15 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div
-                    style={{ fontWeight: "900", color: "white", padding: "8px 10px ", borderRadius: "5px" }}
+                    style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
                     className="features-tiles-item-image mb-16"
                   >
-                    Step 2
-                    {/*<Image
-                      src={require("./../../assets/images/feature-tile-icon-01.svg")}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64}
-                    />*/}
+                    <FontAwesomeIcon icon={faTruckMoving} style={{ fontSize: "50px" }} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">We Drain Your Septic</h4>
+                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">Step 2</div>
+                  <h4 className="mt-0 mb-8">We Pump Your Septic</h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat.
@@ -107,19 +105,14 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div
-                    style={{ fontWeight: "900", color: "white", padding: "8px 10px ", borderRadius: "5px" }}
+                    style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
                     className="features-tiles-item-image mb-16"
                   >
-                    Step 3
-                    {/*<Image
-                      src={require("./../../assets/images/feature-tile-icon-01.svg")}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64}
-                    />*/}
+                    <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "50px" }} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
+                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">Step 3</div>
                   <h4 className="mt-0 mb-8">Completion Email</h4>
                   <p className="m-0 text-sm">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint

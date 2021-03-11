@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Input from "../elements/Input";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const propTypes = {
   ...SectionProps.types,
@@ -36,13 +38,13 @@ const Cta = ({ className, topOuterDivider, bottomOuterDivider, topDivider, botto
       <div className="container">
         <div className={innerClasses}>
           <div className="cta-slogan">
-            <h3 className="m-0">Have a question about our services?</h3>
+            <h3 className="m-0">Have a Question?</h3>
           </div>
-          <div className="cta-action" style={{ marginBottom: "-30px" }}>
+          <div className="cta-action" style={{ marginBottom: "-20px" }}>
             <p style={{ color: "white", marginTop: "5px" }}>
-              Email: blanketyblank@gmail.com
+              <FontAwesomeIcon icon={faEnvelope} /> blanketyblank@gmail.com
               <br />
-              Call: 763-221-8722
+              <FontAwesomeIcon icon={faPhone} /> 763-221-8722
             </p>
           </div>
         </div>

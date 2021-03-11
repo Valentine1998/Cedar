@@ -47,12 +47,15 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               Cedar <span className="text-color-primary">Septic and Sewer</span>
             </h1>
             <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+              </p>
+              <p className="m-0  reveal-from-bottom" data-reveal-delay="400" style={{ color: "white", fontWeight: "900", margin: "10px" }}>
+                763-221-8722
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                  <Button tag="a" color="primary" wideMobile href="#">
                     Schedule a Service
                   </Button>
                   {/*<Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
