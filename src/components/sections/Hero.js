@@ -50,7 +50,11 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
               </p>
-              <p className="m-0  reveal-from-bottom" data-reveal-delay="400" style={{ color: "white", fontWeight: "900", margin: "10px" }}>
+              <p
+                className="m-0  reveal-from-bottom"
+                data-reveal-delay="400"
+                style={{ color: "white", fontWeight: "900", margin: "7px 0px 10px 0px" }}
+              >
                 763-221-8722
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
