@@ -1,9 +1,21 @@
-input:text {
+input[type="text"] {
   border-radius: 8px;
   border: solid thin grey;
   width: 100%;
   padding: 10px;
   background-color: black;
+  color: white;
+  margin-bottom: 10px;
+}
+
+textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  border: solid thin grey;
+  background-color: black;
+  height: 100px;
+  color: white;
+  padding: 10px;
 }
 
 label {

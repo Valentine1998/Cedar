@@ -57,8 +57,34 @@ const FormSection = ({
         <div style={{ paddingTop: "0px" }} className={innerClasses}>
           <div className="center-content">
             <div className="container-xs">
-              <ProgressBar striped variant="success" now={40} />
-              <h3>Just a few questions!</h3>
+              <h5 style={{ marginBottom: "5px" }}>Online Booking</h5>
+              <ProgressBar striped variant="success" now={35} />
+
+              <h3 style={{ marginTop: "5px" }}>Fill out the information</h3>
+
+              <p className="m-0" style={{ textAlign: "left" }}>
+                First Name
+                <input placeholder="John" type="text" />
+              </p>
+              <p className="m-0" style={{ textAlign: "left" }}>
+                Last Name
+                <input placeholder="Doe" type="text" />
+              </p>
+              <p className="m-0" style={{ textAlign: "left" }}>
+                Address
+                <div>
+                  <textarea placeholder="123 Main Street, Minneapolis, MN 10030"></textarea>
+                </div>
+              </p>
+              <p className="m-0" style={{ textAlign: "left" }}>
+                Email
+                <input placeholder="anemail@gmail.com" type="text" />
+              </p>
+              <p className="m-0" style={{ textAlign: "left" }}>
+                Phone Number
+                <input placeholder="(xxx)-xxx-xxxx" type="text" />
+              </p>
+
               <p className="m-0" style={{ textAlign: "left" }}>
                 Do you want to be home for the service?
                 <div>
@@ -117,7 +143,31 @@ const FormSection = ({
               </p>
             </div>
           </div>
+          <div
+            style={{
+              backgroundColor: "#151719",
+              display: "block",
+              position: "fixed",
+              padding: "10px 10px",
+              bottom: "0px",
+              zIndex: "1",
+              width: "100%",
+              left: "0%",
+              boxShadow: "0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)",
+            }}
+          >
+            <div style={{ width: "50%", display: "inline-block", textAlign: "left" }}>
+              <Button>
+                <i className="fas fa-bell" /> Back
+              </Button>
+            </div>
 
+            <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
+              <Button color="primary">
+                <i className="fas fa-share" /> Next
+              </Button>
+            </div>
+          </div>
           {/*<div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
