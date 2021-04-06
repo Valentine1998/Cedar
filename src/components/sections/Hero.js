@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
+import { useLocation, BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
@@ -63,9 +64,11 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/booking">
-                    Book Online
-                  </Button>
+                  <Link to="/booking">
+                    <Button tag="a" color="primary" wideMobile>
+                      Book Online
+                    </Button>
+                  </Link>
                   <Button tag="a" color="primary" wideMobile href="mailto:Cedar.septic@gmail.com">
                     <FontAwesomeIcon style={{ marginTop: "5px" }} icon={faEnvelope} />
                     &nbsp;Cedar.septic@gmail.com
