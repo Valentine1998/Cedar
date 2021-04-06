@@ -57,7 +57,7 @@ const FormSection = ({
     if (step === 1) {
       return (
         <div>
-          <ProgressBar striped variant="success" now={70} />
+          <ProgressBar striped variant="success" now={35} />
 
           <h3 style={{ marginTop: "5px" }}>Fill out the information</h3>
 
@@ -88,6 +88,8 @@ const FormSection = ({
     } else if (step === 2) {
       return (
         <div>
+          <ProgressBar striped variant="success" now={70} />
+          <h3 style={{ marginTop: "5px" }}>Just a few more questions</h3>
           <p className="m-0" style={{ textAlign: "left" }}>
             Do you want to be home for the service?
             <div>
