@@ -5,6 +5,8 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const propTypes = {
   ...SectionProps.types,
@@ -48,23 +50,30 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
             </h1>
             <div className="container-xs">
               <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                Licensed – Bonded – Insured
+                <br />
+                MPCA License #4150
               </p>
               <p
                 className="m-0  reveal-from-bottom"
                 data-reveal-delay="400"
                 style={{ color: "white", fontWeight: "900", margin: "7px 0px 10px 0px" }}
               >
-                763-221-8722
+                For regular maintenance and pumping, call, text or book online now. We are available 24/7 for septic emergencies.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="#">
-                    Schedule a Service
+                    Book Online
                   </Button>
-                  {/*<Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-  </Button>*/}
+                  <Button tag="a" color="primary" wideMobile href="https://github.com/cruip/open-react-template/">
+                    <FontAwesomeIcon style={{ marginTop: "5px" }} icon={faEnvelope} />
+                    &nbsp;Cedar.septic@gmail.com
+                  </Button>
+                  <Button tag="a" color="primary" wideMobile href="https://github.com/cruip/open-react-template/">
+                    <FontAwesomeIcon style={{ marginTop: "5px", marginLeft: "0px", marginRight: "0px" }} icon={faPhone} />
+                    &nbsp;Call/Text
+                  </Button>
                 </ButtonGroup>
               </div>
             </div>

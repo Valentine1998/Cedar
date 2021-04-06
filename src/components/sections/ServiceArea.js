@@ -42,23 +42,37 @@ const ServiceArea = ({
 
   const sectionHeader = {
     title: "Service Area",
-    paragraph:
-      "Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.",
+    paragraph: "We offer service to these counties:",
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
+          <div data-reveal-value="20px" data-reveal-delay="800">
+            <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" width={896} height={504} />
+          </div>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <div
-            className="hero-figure reveal-from-bottom illustration-element-01 center-content"
-            data-reveal-value="20px"
-            data-reveal-delay="800"
-          >
-            <a data-video="https://player.vimeo.com/video/174002812" href="#0" aria-controls="video-modal">
-              <Image className="has-shadow" src={require("./../../assets/images/service-area.PNG")} alt="Hero" width={896} height={504} />
-            </a>
+          <div style={{ marginTop: "0px" }} className="center-content">
+            <div className="container-xs" style={{ color: "white" }}>
+              Anoka County
+              <br /> Isanti County
+              <br />
+              Ramsey County
+              <br />
+              Chisago County
+              <br />
+              Washington County
+              <br />
+              Hennepin County
+              <br />
+              Sherburne County
+              <br />
+              Mille Lacs County
+              <br />
+              Kannabec County
+              <br /> Pine County
+            </div>
           </div>
         </div>
       </div>

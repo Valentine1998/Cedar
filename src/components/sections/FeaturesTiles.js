@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
+import Button from "../elements/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCalendarCheck, faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 import Image from "../elements/Image";
@@ -34,7 +35,7 @@ const FeaturesTiles = ({
   );
 
   const innerClasses = classNames(
-    "features-tiles-inner section-inner pt-0",
+    "testimonial-inner section-inner",
     topDivider && "has-top-divider",
     bottomDivider && "has-bottom-divider"
   );
@@ -42,17 +43,52 @@ const FeaturesTiles = ({
   const tilesClasses = classNames("tiles-wrap center-content", pushLeft && "push-left");
 
   const sectionHeader = {
-    title: "Get It Done Fast",
+    title: "Why should you pump your septic system regularly?",
     paragraph:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.",
+      "Your septic system is not designed to last forever, but regular pumping and maintenance can help to increase the longevity of your drainfield. Keep your septic system healthy, and avoid the cost and headache of replacing it. The average cost of a new septic system is $10,000.",
+    secondParagraph:
+      "The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information on septic systems please visit: https://www.pca.state.mn.us/living-green/healthy-septic-systems",
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
-        <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
-          <div className={tilesClasses}>
+        <div style={{ paddingTop: "0px" }} className={innerClasses}>
+          <div className="center-content">
+            <div className="container-xs">
+              <h2>Why should you pump your septic system regularly?</h2>
+              <p className="m-0" style={{ textAlign: "left" }}>
+                Your septic system is not designed to last forever, but regular pumping and maintenance can help to increase the longevity
+                of your drainfield. Keep your septic system healthy, and avoid the cost and headache of replacing it. The average cost of a
+                new septic system is <strong>$10,000</strong>.
+              </p>
+              <p className="m-1" style={{ textAlign: "left" }}>
+                The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information
+                on septic systems <a href="https://www.pca.state.mn.us/living-green/healthy-septic-systems">check this out</a>.
+              </p>
+            </div>
+          </div>
+          <div className="center-content">
+            <div className="container-xs">
+              <h2>Want to schedule a pumping? It’s Simple!</h2>
+              <p className="mb-3" style={{ textAlign: "left" }}>
+                Cedar Septic and sewer wants to offer our clients the opportunity to book with us entirely online. You will not need to be
+                home during the scheduled maintenance. We will either leave a receipt at your door or sent to you via email.
+                <br />
+                The day prior to your appointment we will contact you to remind you that we will be out the following day. Our technician
+                will pump your septic tanks completely and inspect the system to give a full report on the Current condition of them. Your
+                report will also come with before and after pictures via text or email.
+                <br />
+                At Cedar septic and sewer we follow all of the state guidelines very closely when it comes to the cleaning and disposal of
+                your system.
+              </p>
+              <Button tag="a" color="primary" wideMobile href="#">
+                Book Your Appointment
+              </Button>
+            </div>
+          </div>
+
+          {/*<div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -66,7 +102,7 @@ const FeaturesTiles = ({
                       alt="Features tile icon 01"
                       width={64}
                       height={64}
-                    />*/}
+                    />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -79,6 +115,7 @@ const FeaturesTiles = ({
                 </div>
               </div>
             </div>
+         
 
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
@@ -122,7 +159,7 @@ const FeaturesTiles = ({
               </div>
             </div>
 
-            {/*<div className="tiles-item reveal-from-bottom">
+            <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
@@ -186,8 +223,8 @@ const FeaturesTiles = ({
                   </p>
                   </div>
               </div>
-            </div>*/}
-          </div>
+            </div>
+          </div>*/}
         </div>
       </div>
     </section>
