@@ -63,14 +63,14 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile href="/booking">
                     Book Online
                   </Button>
-                  <Button tag="a" color="primary" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" color="primary" wideMobile href="mailto:Cedar.septic@gmail.com">
                     <FontAwesomeIcon style={{ marginTop: "5px" }} icon={faEnvelope} />
                     &nbsp;Cedar.septic@gmail.com
                   </Button>
-                  <Button tag="a" color="primary" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" color="primary" wideMobile href="tel:763-218-8722">
                     <FontAwesomeIcon style={{ marginTop: "5px", marginLeft: "0px", marginRight: "0px" }} icon={faPhone} />
                     &nbsp;Call/Text
                   </Button>
