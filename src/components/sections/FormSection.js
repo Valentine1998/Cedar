@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
@@ -26,6 +26,8 @@ const FormSection = ({
   pushLeft,
   ...props
 }) => {
+  const [step, setStep] = useState(1);
+
   const outerClasses = classNames(
     "features-tiles section",
     topOuterDivider && "has-top-divider",
@@ -51,6 +53,102 @@ const FormSection = ({
       "The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information on septic systems please visit: https://www.pca.state.mn.us/living-green/healthy-septic-systems",
   };
 
+  const form = () => {
+    if (step === 1) {
+      return (
+        <div>
+          <ProgressBar striped variant="success" now={70} />
+
+          <h3 style={{ marginTop: "5px" }}>Fill out the information</h3>
+
+          <p className="m-0" style={{ textAlign: "left" }}>
+            First Name
+            <input placeholder="John" type="text" />
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Last Name
+            <input placeholder="Doe" type="text" />
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Address
+            <div>
+              <textarea placeholder="123 Main Street, Minneapolis, MN 10030"></textarea>
+            </div>
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Email
+            <input placeholder="anemail@gmail.com" type="text" />
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Phone Number
+            <input placeholder="(xxx)-xxx-xxxx" type="text" />
+          </p>
+        </div>
+      );
+    } else if (step === 2) {
+      return (
+        <div>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Do you want to be home for the service?
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">&nbsp;Yes</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;No</label>
+            </div>
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Do you want the servicing to be done in the morning or afternoon?
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">&nbsp;Morning</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;Afternoon</label>
+            </div>
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Do you have pets?
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">&nbsp;Yes</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;No</label>
+            </div>
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            What side of the house is your tank(s) located on?
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">&nbsp;Right</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;Left</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;Front</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;Back</label>
+            </div>
+          </p>
+          <p className="m-0" style={{ textAlign: "left" }}>
+            Is your tank(s) visible?
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">&nbsp;Yes</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="male"> &nbsp;No</label>
+            </div>
+          </p>
+        </div>
+      );
+    }
+  };
+
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
@@ -58,89 +156,7 @@ const FormSection = ({
           <div className="center-content">
             <div className="container-xs">
               <h5 style={{ marginBottom: "5px" }}>Online Booking</h5>
-              <ProgressBar striped variant="success" now={35} />
-
-              <h3 style={{ marginTop: "5px" }}>Fill out the information</h3>
-
-              <p className="m-0" style={{ textAlign: "left" }}>
-                First Name
-                <input placeholder="John" type="text" />
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Last Name
-                <input placeholder="Doe" type="text" />
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Address
-                <div>
-                  <textarea placeholder="123 Main Street, Minneapolis, MN 10030"></textarea>
-                </div>
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Email
-                <input placeholder="anemail@gmail.com" type="text" />
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Phone Number
-                <input placeholder="(xxx)-xxx-xxxx" type="text" />
-              </p>
-
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Do you want to be home for the service?
-                <div>
-                  <input type="radio" id="male" name="gender" value="male" />
-                  <label for="male">&nbsp;Yes</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;No</label>
-                </div>
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Do you want the servicing to be done in the morning or afternoon?
-                <div>
-                  <input type="radio" id="male" name="gender" value="male" />
-                  <label for="male">&nbsp;Morning</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;Afternoon</label>
-                </div>
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Do you have pets?
-                <div>
-                  <input type="radio" id="male" name="gender" value="male" />
-                  <label for="male">&nbsp;Yes</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;No</label>
-                </div>
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                What side of the house is your tank(s) located on?
-                <div>
-                  <input type="radio" id="male" name="gender" value="male" />
-                  <label for="male">&nbsp;Right</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;Left</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;Front</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;Back</label>
-                </div>
-              </p>
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Is your tank(s) visible?
-                <div>
-                  <input type="radio" id="male" name="gender" value="male" />
-                  <label for="male">&nbsp;Yes</label>
-                  <br />
-                  <input type="radio" id="female" name="gender" value="female" />
-                  <label for="male"> &nbsp;No</label>
-                </div>
-              </p>
+              {form()}
             </div>
           </div>
           <div
@@ -157,13 +173,13 @@ const FormSection = ({
             }}
           >
             <div style={{ width: "50%", display: "inline-block", textAlign: "left" }}>
-              <Button>
+              <Button onClick={() => setStep(step - 1)}>
                 <i className="fas fa-bell" /> Back
               </Button>
             </div>
 
             <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
-              <Button color="primary">
+              <Button onClick={() => setStep(step + 1)} color="primary">
                 <i className="fas fa-share" /> Next
               </Button>
             </div>
