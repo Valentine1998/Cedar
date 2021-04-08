@@ -3,6 +3,8 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faEnvelope, faBuilding, faUniversity } from "@fortawesome/free-solid-svg-icons";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -51,33 +53,77 @@ const Services = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div style={{ marginTop: "0px" }} className="center-content">
-            <div className="container-xs">
-              <h5 style={{ marginTop: "-30px", marginBottom: "0", textDecoration: "underline" }}>Sewer Services</h5>
-              <p>
-                Pumping
-                <br />
-                Maintenance
-                <br />
-                Repair
-                <br />
-                Installation
-              </p>
-              <h5 style={{ marginBottom: "0", textDecoration: "underline" }}>Municipal Services</h5>
-              <p>
-                Lift Station Cleaning
-                <br />
-                Sewer Emergency Services
-              </p>
-              <h5 style={{ marginBottom: "0", textDecoration: "underline" }}>Commercial Services</h5>
-              <p>
-                Grease trap pumping
-                <br />
-                Drain Cleaning
-                <br />
-                Sand Trap Pumping
-                <br />
-                Parking Garage Cleaning
-              </p>
+            <div>
+              <div className={tilesClasses}>
+                <div className="tiles-item reveal-from-bottom">
+                  <div className="tiles-item-inner">
+                    <div className="features-tiles-item-header">
+                      <div
+                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
+                        className="features-tiles-item-image mb-16"
+                      >
+                        <FontAwesomeIcon icon={faHome} style={{ fontSize: "50px" }} />
+                      </div>
+                    </div>
+                    <div className="features-tiles-item-content">
+                      <h4 className="mt-0 pt-0 mb-8">Septic Services</h4>
+                      <p className="m-0 text-sm">
+                        <p>
+                          Pumping
+                          <br />
+                          Maintenance
+                          <br />
+                          Repair
+                          <br />
+                          Installation
+                        </p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+                  <div className="tiles-item-inner">
+                    <div className="features-tiles-item-header">
+                      <div
+                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
+                        className="features-tiles-item-image mb-16"
+                      >
+                        <FontAwesomeIcon icon={faBuilding} style={{ fontSize: "50px" }} />
+                      </div>
+                    </div>
+                    <div className="features-tiles-item-content">
+                      <h4 className="mt-0 mb-8">Municipal Services</h4>
+                      <p className="m-0 text-sm">Sewer Emergency Services</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+                  <div className="tiles-item-inner">
+                    <div className="features-tiles-item-header">
+                      <div
+                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
+                        className="features-tiles-item-image mb-16"
+                      >
+                        <FontAwesomeIcon icon={faBuilding} style={{ fontSize: "50px" }} />
+                      </div>
+                    </div>
+                    <div className="features-tiles-item-content">
+                      <h4 className="mt-0 mb-8">Commercial Services</h4>
+                      <p className="m-0 text-sm">
+                        Grease trap pumping
+                        <br />
+                        Drain Cleaning
+                        <br />
+                        Sand Trap Pumping
+                        <br />
+                        Parking Garage Cleaning
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -64,18 +64,18 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               </p>
               <div style={{ marginTop: "25px" }} className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Link to="/booking">
-                    <Button style={{ margin: "5px" }} tag="a" color="primary" wideMobile>
-                      <FontAwesomeIcon style={{ marginTop: "5px", marginLeft: "0px", marginRight: "0px" }} icon={faDesktop} />
+                  <Link style={{ width: "100%", margin: "8px" }} to="/booking">
+                    <Button tag="a" color="primary" wideMobile>
+                      <FontAwesomeIcon style={{ marginTop: "3px" }} icon={faDesktop} />
                       &nbsp;Book Online
                     </Button>
                   </Link>
                   <Button tag="a" color="primary" wideMobile href="mailto:Cedar.septic@gmail.com">
-                    <FontAwesomeIcon style={{ marginTop: "5px" }} icon={faEnvelope} />
-                    &nbsp;Cedar.septic@gmail.com
+                    <FontAwesomeIcon style={{ marginTop: "3px" }} icon={faEnvelope} />
+                    &nbsp;Email
                   </Button>
                   <Button tag="a" color="primary" wideMobile href="tel:763-218-8722">
-                    <FontAwesomeIcon style={{ marginTop: "5px", marginLeft: "0px", marginRight: "0px" }} icon={faPhone} />
+                    <FontAwesomeIcon style={{ marginTop: "3px", marginLeft: "0px", marginRight: "0px" }} icon={faPhone} />
                     &nbsp;Call/Text
                   </Button>
                 </ButtonGroup>

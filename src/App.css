@@ -8,6 +8,16 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
+a:hover {
+  color: lightgrey;
+}
+
+.center-content img,
+.center-content svg,
+.center-content video {
+  margin-left: unset;
+  margin-right: unset;
+}
 .button[disabled] {
   cursor: not-allowed;
   opacity: 0.6;

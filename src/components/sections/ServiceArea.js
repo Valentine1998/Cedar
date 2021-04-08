@@ -50,12 +50,12 @@ const ServiceArea = ({
       <div className="container">
         <div className={innerClasses}>
           <div data-reveal-value="20px" data-reveal-delay="800">
-            <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" width={896} height={504} />
+            <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" style={{ margin: "auto" }} />
           </div>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div style={{ marginTop: "0px" }} className="center-content">
             <div className="container-xs">
-              <p style={{ marginTop: "-30px" }}>
+              <p style={{ marginTop: "-40px" }}>
                 Anoka County
                 <br /> Isanti County
                 <br />

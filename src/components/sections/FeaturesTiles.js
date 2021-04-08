@@ -83,8 +83,8 @@ const FeaturesTiles = ({
                 At Cedar septic and sewer we follow all of the state guidelines very closely when it comes to the cleaning and disposal of
                 your system.
               </p>
-              <Link href="/booking">
-                <Button tag="a" color="primary" wideMobile href="#">
+              <Link to="/booking">
+                <Button tag="a" color="primary" wideMobile>
                   Book Your Service
                 </Button>
               </Link>

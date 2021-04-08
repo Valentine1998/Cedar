@@ -42,9 +42,13 @@ const Cta = ({ className, topOuterDivider, bottomOuterDivider, topDivider, botto
           </div>
           <div className="cta-action" style={{ marginBottom: "-20px" }}>
             <p style={{ color: "white", marginTop: "5px" }}>
-              <FontAwesomeIcon icon={faEnvelope} /> Cedar.septic@gmail.com
+              <a href="mailto:Cedar.septic@gmail.com">
+                <FontAwesomeIcon icon={faEnvelope} /> Cedar.septic@gmail.com
+              </a>
               <br />
-              <FontAwesomeIcon icon={faPhone} /> 763-218-8722
+              <a href="tel:763-218-8722">
+                <FontAwesomeIcon icon={faPhone} /> 763-218-8722
+              </a>
             </p>
           </div>
         </div>

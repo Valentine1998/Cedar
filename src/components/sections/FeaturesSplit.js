@@ -75,7 +75,7 @@ const FeaturesSplit = ({
                 className={classNames("split-item-image center-content-mobile reveal-from-bottom", imageFill && "split-item-image-fill")}
                 data-reveal-container=".split-item"
               >
-                <Image src={require("./../../assets/images/ben.jpg")} alt="Features split 01" width={528} height={396} />
+                <Image src={require("./../../assets/images/fam.jpeg")} alt="Features split 01" width={528} height={396} />
               </div>
             </div>
 
