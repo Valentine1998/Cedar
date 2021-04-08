@@ -49,7 +49,7 @@ const Pricing = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div className="container" id="prices">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div style={{ marginTop: "0px" }} className="center-content">

@@ -49,7 +49,7 @@ const Services = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div className="container" id="service-area">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div style={{ marginTop: "0px" }} className="center-content">
@@ -89,7 +89,7 @@ const Services = ({
                         style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
                         className="features-tiles-item-image mb-16"
                       >
-                        <FontAwesomeIcon icon={faBuilding} style={{ fontSize: "50px" }} />
+                        <FontAwesomeIcon icon={faUniversity} style={{ fontSize: "50px" }} />
                       </div>
                     </div>
                     <div className="features-tiles-item-content">

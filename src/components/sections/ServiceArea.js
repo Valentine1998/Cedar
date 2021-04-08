@@ -47,7 +47,7 @@ const ServiceArea = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div className="container" id="service-area">
         <div className={innerClasses}>
           <div data-reveal-value="20px" data-reveal-delay="800">
             <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" style={{ margin: "auto" }} />

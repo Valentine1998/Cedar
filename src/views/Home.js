@@ -14,9 +14,11 @@ const Home = () => {
     <>
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
+
       <Services topDivider />
-      <Pricing topDivider />
+
       <ServiceArea topDivider />
+      <Pricing topDivider />
 
       <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
 

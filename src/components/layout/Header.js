@@ -78,21 +78,27 @@ const Header = ({ className, navPosition, hideNav, hideSignin, bottomOuterDivide
                 <div className="header-nav-inner">
                   <ul className={classNames("list-reset text-xs", navPosition && `header-nav-${navPosition}`)}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
-                        How We Do It
-                      </Link>
+                      <a href="#services" onClick={closeMenu}>
+                        Services
+                      </a>
                     </li>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
-                        Contact Us
-                      </Link>
+                      <a href="#prices" onClick={closeMenu}>
+                        Prices
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#about" onClick={closeMenu}>
+                        About Us
+                      </a>
                     </li>
                   </ul>
                   {!hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>
-                          Schedule a Service
+                        <Link to="/booking" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>
+                          Book a Service
                         </Link>
                       </li>
                     </ul>
