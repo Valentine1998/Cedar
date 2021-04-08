@@ -119,9 +119,9 @@ const Pricing = ({
                       <h4 className="mt-0 pt-0 mb-8">Three Tanks</h4>
                       <p>3000 Gallons</p>
                       <p className="m-0 ">
-                        <h2 className="m-0" style={{ color: "green" }}>
+                        <h3 className="m-0" style={{ color: "green" }}>
                           $295 <span style={{ color: "white " }}>+</span> $85 <span style={{ color: "white " }}>+</span> $85
-                        </h2>
+                        </h3>
                       </p>
                     </div>
                   </div>

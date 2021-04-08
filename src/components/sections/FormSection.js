@@ -130,7 +130,7 @@ const FormSection = ({
         <div>
           <ProgressBar striped variant="success" now={70} />
           <h3 style={{ marginTop: "5px" }}>Just a few more questions</h3>
-          <p className="mb-2" style={{ textAlign: "left" }}>
+          <p className="mb-3" style={{ textAlign: "left" }}>
             Do you want to be home for the service?
             <div>
               <input onChange={handleChange} type="radio" id="male" name="ownerHome" value="Yes" />
@@ -138,9 +138,12 @@ const FormSection = ({
               <br />
               <input onChange={handleChange} type="radio" id="female" name="ownerHome" value="No" />
               <label for="male"> &nbsp;No</label>
+              <br />
+              <input onChange={handleChange} type="radio" id="female" name="ownerHome" value="Doesn't Matter" />
+              <label for="male"> &nbsp;Doesn't Matter</label>
             </div>
           </p>
-          <p className="mb-2" style={{ textAlign: "left" }}>
+          <p className="mb-3" style={{ textAlign: "left" }}>
             Do you want the servicing to be done in the morning or afternoon?
             <div>
               <input onChange={handleChange} type="radio" id="time" name="time" value="Morning" />
@@ -148,19 +151,24 @@ const FormSection = ({
               <br />
               <input onChange={handleChange} type="radio" id="time" name="time" value="Afternoon" />
               <label for="male"> &nbsp;Afternoon</label>
+              <br />
+              <input onChange={handleChange} type="radio" id="time" name="time" value="Doesn't Matter" />
+              <label for="male"> &nbsp;Doesn't Matter</label>
             </div>
           </p>
-          <p className="mb-2" style={{ textAlign: "left" }}>
+          <p className="mb-3" style={{ textAlign: "left" }}>
             Do you have pets?
             <div>
               <input onChange={handleChange} type="radio" id="pets" name="pets" value="Yes" />
               <label for="male">&nbsp;Yes</label>
               <br />
+
               <input onChange={handleChange} type="radio" id="pets" name="pets" value="No" />
               <label for="male"> &nbsp;No</label>
             </div>
+            {data.pets === "Yes" && <span style={{ color: "white" }}>Please make sure your pets are inside for their safety.</span>}
           </p>
-          <p className="mb-2" style={{ textAlign: "left" }}>
+          <p className="mb-3" style={{ textAlign: "left" }}>
             What side of the house is your tank(s) located on?
             <div>
               <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Right" />
@@ -174,9 +182,12 @@ const FormSection = ({
               <br />
               <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Back" />
               <label for="male"> &nbsp;Back</label>
+              <br />
+              <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Not Sure" />
+              <label for="male"> &nbsp;Not Sure</label>
             </div>
           </p>
-          <p className="mb-2" style={{ textAlign: "left" }}>
+          <p className="mb-3" style={{ textAlign: "left" }}>
             Is your tank(s) visible?
             <div>
               <input onChange={handleChange} type="radio" id="male" name="tankVisible" value="Yes" />
@@ -184,6 +195,9 @@ const FormSection = ({
               <br />
               <input onChange={handleChange} type="radio" id="female" name="tankVisible" value="No" />
               <label for="male"> &nbsp;No</label>
+              <br />
+              <input onChange={handleChange} type="radio" id="female" name="tankVisible" value="Not Sure" />
+              <label for="male"> &nbsp;Not Sure</label>
             </div>
           </p>
         </div>
