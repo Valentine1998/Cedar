@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCalendarCheck, faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 import Image from "../elements/Image";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -26,7 +28,22 @@ const FormSection = ({
   pushLeft,
   ...props
 }) => {
+  let history = useHistory();
   const [step, setStep] = useState(1);
+  const [data, setData] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    if (step === 1) {
+      if (data.firstName && data.lastName && data.address && data.phoneNumber && data.email) {
+        setDisabled(false);
+      }
+    } else if (step === 2) {
+      if (data.firstName && data.lastName && data.address && data.phoneNumber && data.email) {
+        setDisabled(false);
+      }
+    }
+  }, [data]);
 
   const outerClasses = classNames(
     "features-tiles section",
@@ -53,6 +70,27 @@ const FormSection = ({
       "The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information on septic systems please visit: https://www.pca.state.mn.us/living-green/healthy-septic-systems",
   };
 
+  const setStepForward = () => {
+    setStep(step + 1);
+  };
+
+  const setStepBack = () => {
+    if (step === 1) {
+      history.push("/");
+    } else {
+      setStep(step - 1);
+    }
+  };
+
+  const submitForm = async () => {
+    await axios.post(`https://sheet.best/api/sheets/43261ee9-8094-4217-9380-f0231c31c211`, data);
+    setStepForward();
+  };
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
   const form = () => {
     if (step === 1) {
       return (
@@ -63,25 +101,25 @@ const FormSection = ({
 
           <p className="m-0" style={{ textAlign: "left" }}>
             First Name
-            <input placeholder="John" type="text" />
+            <input placeholder="John" onChange={handleChange} type="text" name="firstName" />
           </p>
           <p className="m-0" style={{ textAlign: "left" }}>
             Last Name
-            <input placeholder="Doe" type="text" />
+            <input placeholder="Doe" onChange={handleChange} type="text" name="lastName" />
           </p>
           <p className="m-0" style={{ textAlign: "left" }}>
             Address
             <div>
-              <textarea placeholder="123 Main Street, Minneapolis, MN 10030"></textarea>
+              <textarea onChange={handleChange} placeholder="123 Main Street, Minneapolis, MN 10030" name="address"></textarea>
             </div>
           </p>
           <p className="m-0" style={{ textAlign: "left" }}>
             Email
-            <input placeholder="anemail@gmail.com" type="text" />
+            <input onChange={handleChange} placeholder="anemail@gmail.com" type="text" name="email" />
           </p>
           <p className="m-0" style={{ textAlign: "left" }}>
             Phone Number
-            <input placeholder="(xxx)-xxx-xxxx" type="text" />
+            <input name="phoneNumber" onChange={handleChange} placeholder="(xxx)-xxx-xxxx" type="text" />
           </p>
         </div>
       );
@@ -90,61 +128,71 @@ const FormSection = ({
         <div>
           <ProgressBar striped variant="success" now={70} />
           <h3 style={{ marginTop: "5px" }}>Just a few more questions</h3>
-          <p className="m-0" style={{ textAlign: "left" }}>
+          <p className="mb-2" style={{ textAlign: "left" }}>
             Do you want to be home for the service?
             <div>
-              <input type="radio" id="male" name="gender" value="male" />
+              <input onChange={handleChange} type="radio" id="male" name="ownerHome" value="Yes" />
               <label for="male">&nbsp;Yes</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="female" name="ownerHome" value="No" />
               <label for="male"> &nbsp;No</label>
             </div>
           </p>
-          <p className="m-0" style={{ textAlign: "left" }}>
+          <p className="mb-2" style={{ textAlign: "left" }}>
             Do you want the servicing to be done in the morning or afternoon?
             <div>
-              <input type="radio" id="male" name="gender" value="male" />
+              <input onChange={handleChange} type="radio" id="time" name="time" value="Morning" />
               <label for="male">&nbsp;Morning</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="time" name="time" value="Afternoon" />
               <label for="male"> &nbsp;Afternoon</label>
             </div>
           </p>
-          <p className="m-0" style={{ textAlign: "left" }}>
+          <p className="mb-2" style={{ textAlign: "left" }}>
             Do you have pets?
             <div>
-              <input type="radio" id="male" name="gender" value="male" />
+              <input onChange={handleChange} type="radio" id="pets" name="pets" value="Yes" />
               <label for="male">&nbsp;Yes</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="pets" name="pets" value="No" />
               <label for="male"> &nbsp;No</label>
             </div>
           </p>
-          <p className="m-0" style={{ textAlign: "left" }}>
+          <p className="mb-2" style={{ textAlign: "left" }}>
             What side of the house is your tank(s) located on?
             <div>
-              <input type="radio" id="male" name="gender" value="male" />
+              <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Right" />
               <label for="male">&nbsp;Right</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Left" />
               <label for="male"> &nbsp;Left</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Front" />
               <label for="male"> &nbsp;Front</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="tankLocation" name="tankLocation" value="Back" />
               <label for="male"> &nbsp;Back</label>
             </div>
           </p>
-          <p className="m-0" style={{ textAlign: "left" }}>
+          <p className="mb-2" style={{ textAlign: "left" }}>
             Is your tank(s) visible?
             <div>
-              <input type="radio" id="male" name="gender" value="male" />
+              <input onChange={handleChange} type="radio" id="male" name="tankVisible" value="Yes" />
               <label for="male">&nbsp;Yes</label>
               <br />
-              <input type="radio" id="female" name="gender" value="female" />
+              <input onChange={handleChange} type="radio" id="female" name="tankVisible" value="No" />
               <label for="male"> &nbsp;No</label>
             </div>
+          </p>
+        </div>
+      );
+    } else if (step === 3) {
+      return (
+        <div>
+          <ProgressBar striped variant="success" now={100} />
+          <h3 style={{ marginTop: "5px" }}>Booking Complete</h3>
+          <p className="mb-2" style={{ textAlign: "left" }}>
+            You will receive a text/email/call to confirm your service date!
           </p>
         </div>
       );
@@ -175,16 +223,26 @@ const FormSection = ({
             }}
           >
             <div style={{ width: "50%", display: "inline-block", textAlign: "left" }}>
-              <Button onClick={() => setStep(step - 1)}>
-                <i className="fas fa-bell" /> Back
-              </Button>
+              {step !== 3 ? (
+                <Button onClick={setStepBack}>
+                  <i className="fas fa-bell" /> Back
+                </Button>
+              ) : null}
             </div>
 
-            <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
-              <Button onClick={() => setStep(step + 1)} color="primary">
-                <i className="fas fa-share" /> Next
-              </Button>
-            </div>
+            {step === 1 ? (
+              <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
+                <Button disabled={disabled} onClick={setStepForward} color="primary">
+                  <i className="fas fa-share" /> Next
+                </Button>
+              </div>
+            ) : (
+              <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
+                <Button disabled={disabled} onClick={submitForm} color="primary">
+                  <i className="fas fa-share" /> Submit
+                </Button>
+              </div>
+            )}
           </div>
           {/*<div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom">

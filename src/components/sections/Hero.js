@@ -62,7 +62,7 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               >
                 For regular maintenance and pumping, call, text or book online now. We are available 24/7 for septic emergencies.
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div style={{ marginTop: "15px" }} className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Link to="/booking">
                     <Button tag="a" color="primary" wideMobile>
