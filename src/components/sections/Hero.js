@@ -7,7 +7,7 @@ import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faDesktop } from "@fortawesome/free-solid-svg-icons";
 
 const propTypes = {
   ...SectionProps.types,
@@ -62,11 +62,12 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               >
                 For regular maintenance and pumping, call, text or book online now. We are available 24/7 for septic emergencies.
               </p>
-              <div style={{ marginTop: "15px" }} className="reveal-from-bottom" data-reveal-delay="600">
+              <div style={{ marginTop: "25px" }} className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Link to="/booking">
-                    <Button tag="a" color="primary" wideMobile>
-                      Book Online
+                    <Button style={{ margin: "5px" }} tag="a" color="primary" wideMobile>
+                      <FontAwesomeIcon style={{ marginTop: "5px", marginLeft: "0px", marginRight: "0px" }} icon={faDesktop} />
+                      &nbsp;Book Online
                     </Button>
                   </Link>
                   <Button tag="a" color="primary" wideMobile href="mailto:Cedar.septic@gmail.com">

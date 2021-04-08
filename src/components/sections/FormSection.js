@@ -34,16 +34,17 @@ const FormSection = ({
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
+    setDisabled(true);
     if (step === 1) {
       if (data.firstName && data.lastName && data.address && data.phoneNumber && data.email) {
         setDisabled(false);
       }
     } else if (step === 2) {
-      if (data.firstName && data.lastName && data.address && data.phoneNumber && data.email) {
+      if (data.ownerHome && data.time && data.pets && data.tankLocation && data.tankVisible) {
         setDisabled(false);
       }
     }
-  }, [data]);
+  }, [data, step]);
 
   const outerClasses = classNames(
     "features-tiles section",
@@ -83,6 +84,7 @@ const FormSection = ({
   };
 
   const submitForm = async () => {
+    setDisabled(true);
     await axios.post(`https://sheet.best/api/sheets/43261ee9-8094-4217-9380-f0231c31c211`, data);
     setStepForward();
   };
@@ -230,7 +232,7 @@ const FormSection = ({
               ) : null}
             </div>
 
-            {step === 1 ? (
+            {step === 3 ? null : step === 1 ? (
               <div style={{ width: "50%", display: "inline-block", textAlign: "right" }}>
                 <Button disabled={disabled} onClick={setStepForward} color="primary">
                   <i className="fas fa-share" /> Next

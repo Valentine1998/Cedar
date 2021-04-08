@@ -6,6 +6,7 @@ import Button from "../elements/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCalendarCheck, faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 import Image from "../elements/Image";
+import { useLocation, BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -82,9 +83,11 @@ const FeaturesTiles = ({
                 At Cedar septic and sewer we follow all of the state guidelines very closely when it comes to the cleaning and disposal of
                 your system.
               </p>
-              <Button tag="a" color="primary" wideMobile href="#">
-                Book Your Appointment
-              </Button>
+              <Link href="/booking">
+                <Button tag="a" color="primary" wideMobile href="#">
+                  Book Your Service
+                </Button>
+              </Link>
             </div>
           </div>
 

@@ -12,7 +12,7 @@ const defaultProps = {
   ...SectionTilesProps.defaults,
 };
 
-const ServiceArea = ({
+const Services = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -41,38 +41,42 @@ const ServiceArea = ({
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const sectionHeader = {
-    title: "Service Area",
-    paragraph: "We offer service to these counties:",
+    title: "Services",
+    paragraph: "We offer multiple services for every sewer setup. Contact us to see how we can help you!",
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
-          <div data-reveal-value="20px" data-reveal-delay="800">
-            <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" width={896} height={504} />
-          </div>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div style={{ marginTop: "0px" }} className="center-content">
             <div className="container-xs">
-              <p style={{ marginTop: "-30px" }}>
-                Anoka County
-                <br /> Isanti County
+              <h5 style={{ marginTop: "-30px", marginBottom: "0", textDecoration: "underline" }}>Sewer Services</h5>
+              <p>
+                Pumping
                 <br />
-                Ramsey County
+                Maintenance
                 <br />
-                Chisago County
+                Repair
                 <br />
-                Washington County
+                Installation
+              </p>
+              <h5 style={{ marginBottom: "0", textDecoration: "underline" }}>Municipal Services</h5>
+              <p>
+                Lift Station Cleaning
                 <br />
-                Hennepin County
+                Sewer Emergency Services
+              </p>
+              <h5 style={{ marginBottom: "0", textDecoration: "underline" }}>Commercial Services</h5>
+              <p>
+                Grease trap pumping
                 <br />
-                Sherburne County
+                Drain Cleaning
                 <br />
-                Mille Lacs County
+                Sand Trap Pumping
                 <br />
-                Kannabec County
-                <br /> Pine County
+                Parking Garage Cleaning
               </p>
             </div>
           </div>
@@ -82,7 +86,7 @@ const ServiceArea = ({
   );
 };
 
-ServiceArea.propTypes = propTypes;
-ServiceArea.defaultProps = defaultProps;
+Services.propTypes = propTypes;
+Services.defaultProps = defaultProps;
 
-export default ServiceArea;
+export default Services;
