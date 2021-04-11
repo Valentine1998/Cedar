@@ -44,7 +44,7 @@ const Pricing = ({
 
   const sectionHeader = {
     title: "Pricing",
-    paragraph: "We offer multiple Pricing for every sewer setup. Contact us to see how we can help you!",
+    paragraph: "Shown below is our pricing for residential septic systems. For all other services contact us for a quote.",
   };
 
   return (
@@ -57,71 +57,20 @@ const Pricing = ({
               <div className={tilesClasses}>
                 <div className="tiles-item reveal-from-bottom">
                   <div className="tiles-item-inner">
-                    <div className="features-tiles-item-header">
-                      <div
-                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
-                        className="features-tiles-item-image mb-16"
-                      >
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                      </div>
-                    </div>
                     <div className="features-tiles-item-content">
-                      <h4 className="mt-0 pt-0 mb-8">One Tank</h4>
-                      <p>1000 Gallons</p>
-                      <p className="m-0 ">
-                        <h2 className="m-0" style={{ color: "green" }}>
-                          $295
-                        </h2>
+                      <h4 className="mt-0 pt-0 mb-8">Tanks and Their Size</h4>
+                      <p>
+                        {" "}
+                        Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $295</span>
                       </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-                  <div className="tiles-item-inner">
-                    <div className="features-tiles-item-header">
-                      <div
-                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
-                        className="features-tiles-item-image mb-16"
-                      >
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                        &nbsp;
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                      </div>
-                    </div>
-                    <div className="features-tiles-item-content">
-                      <h4 className="mt-0 pt-0 mb-8">Two Tanks</h4>
-                      <p>2000 Gallons</p>
-                      <p className="m-0 ">
-                        <h2 className="m-0" style={{ color: "green" }}>
-                          $295 <span style={{ color: "white " }}>+</span> $85
-                        </h2>
+                      <p>
+                        Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
                       </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-                  <div className="tiles-item-inner">
-                    <div className="features-tiles-item-header">
-                      <div
-                        style={{ fontWeight: "900", color: "white", padding: "20px 25px", borderRadius: "10px" }}
-                        className="features-tiles-item-image mb-16"
-                      >
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                        &nbsp;
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                        &nbsp;
-                        <FontAwesomeIcon icon={faWindowMaximize} style={{ fontSize: "50px" }} />
-                      </div>
-                    </div>
-                    <div className="features-tiles-item-content">
-                      <h4 className="mt-0 pt-0 mb-8">Three Tanks</h4>
-                      <p>3000 Gallons</p>
-                      <p className="m-0 ">
-                        <h3 className="m-0" style={{ color: "green" }}>
-                          $295 <span style={{ color: "white " }}>+</span> $85 <span style={{ color: "white " }}>+</span> $85
-                        </h3>
+                      <p>
+                        Tank 3 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
+                      </p>
+                      <p>
+                        Pump Tank - <span style={{ color: "green" }}>$25</span>
                       </p>
                     </div>
                   </div>
