@@ -74,7 +74,7 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
                     <FontAwesomeIcon style={{ marginTop: "3px" }} icon={faEnvelope} />
                     &nbsp;Email
                   </Button>
-                  <Button tag="a" color="primary" wideMobile href="tel:763-218-8722">
+                  <Button tag="a" color="primary" wideMobile href="tel:763-218-1397">
                     <FontAwesomeIcon style={{ marginTop: "3px", marginLeft: "0px", marginRight: "0px" }} icon={faPhone} />
                     &nbsp;Call/Text
                   </Button>

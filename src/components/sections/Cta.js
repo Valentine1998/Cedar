@@ -46,8 +46,8 @@ const Cta = ({ className, topOuterDivider, bottomOuterDivider, topDivider, botto
                 <FontAwesomeIcon icon={faEnvelope} /> Cedar.septic@gmail.com
               </a>
               <br />
-              <a href="tel:763-218-8722">
-                <FontAwesomeIcon icon={faPhone} /> 763-218-8722
+              <a href="tel:763-218-1397">
+                <FontAwesomeIcon icon={faPhone} /> 763-218-1397
               </a>
             </p>
           </div>

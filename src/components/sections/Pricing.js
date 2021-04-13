@@ -59,18 +59,15 @@ const Pricing = ({
                   <div className="tiles-item-inner">
                     <div className="features-tiles-item-content">
                       <h4 className="mt-0 pt-0 mb-8">Tanks and Their Size</h4>
-                      <p>
+                      <p style={{ fontSize: "18px" }}>
                         {" "}
                         Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $295</span>
                       </p>
-                      <p>
+                      <p style={{ fontSize: "18px" }}>
                         Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
                       </p>
-                      <p>
-                        Tank 3 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
-                      </p>
-                      <p>
-                        Pump Tank - <span style={{ color: "green" }}>$25</span>
+                      <p style={{ fontSize: "18px" }}>
+                        Pump Tank <span style={{ color: "green" }}>= $25</span>
                       </p>
                     </div>
                   </div>
