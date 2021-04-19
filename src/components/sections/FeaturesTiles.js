@@ -71,10 +71,10 @@ const FeaturesTiles = ({
           </div>
           <div className="center-content">
             <div className="container-xs">
-              <h2>Want to schedule a pumping? It’s Simple!</h2>
+              <h2>Want to schedule a pumping? It’s simple!</h2>
               <p className="mb-3" style={{ textAlign: "left" }}>
-                Cedar Septic and sewer wants to offer our clients the opportunity to book with us entirely online. You will not need to be
-                home during the scheduled maintenance. We will either leave a receipt at your door or sent to you via email.
+                Cedar Septic and Sewer wants to offer our clients the opportunity to book with us entirely online. You will not need to be
+                home during the scheduled maintenance. We will either leave a receipt at your door or have it sent to via email.
                 <br />
                 The day prior to your appointment we will contact you to remind you that we will be out the following day. Our technician
                 will pump your septic tanks completely and inspect the system to give a full report on the current condition of them. Your

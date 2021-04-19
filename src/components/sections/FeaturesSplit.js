@@ -51,7 +51,7 @@ const FeaturesSplit = ({
   const sectionHeader = {
     title: "About Us",
     paragraph:
-      "Working with sewage might not always be glamorous but we take as much pride in our work as possible. We will respect your property and always leave it in the same condition it was in when we arrived. You have our word to never drive on your lawn, as our truck is equipped with enough hose to reach you tanks from either your driveway or the road.",
+      "Working with sewage might not always be glamorous but we take as much pride in our work as possible. We will respect your property and always leave it in the same condition it was in when we arrived. You have our word to never drive on your lawn, as our truck is equipped with enough hose to reach your tanks from either your driveway or the road.",
   };
 
   return (
