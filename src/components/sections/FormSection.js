@@ -75,9 +75,15 @@ const FormSection = ({
     setStep(step + 1);
   };
 
+  const setStepError = () => {
+    setStep(4);
+  };
+
   const setStepBack = () => {
     if (step === 1) {
       history.push("/");
+    } else if (step === 4) {
+      setStep(1);
     } else {
       setStep(step - 1);
     }
@@ -85,8 +91,14 @@ const FormSection = ({
 
   const submitForm = async () => {
     setDisabled(true);
-    await axios.post(`https://sheet.best/api/sheets/43261ee9-8094-4217-9380-f0231c31c211`, data);
-    setStepForward();
+    console.log(data);
+
+    let result = await axios.post(`https://sheet.best/api/sheets/43261ee9-8094-4217-9380-f0231c31c211`, data);
+    if (result.status === 200) {
+      setStepForward();
+    } else {
+      setStepError();
+    }
   };
 
   const handleChange = (e) => {
@@ -209,6 +221,16 @@ const FormSection = ({
           <h3 style={{ marginTop: "5px" }}>Booking Complete</h3>
           <p className="mb-2" style={{ textAlign: "left" }}>
             You will receive a text/email/call to confirm your service date!
+          </p>
+        </div>
+      );
+    } else if (step === 4) {
+      return (
+        <div>
+          <ProgressBar striped variant="success" now={100} />
+          <h3 style={{ marginTop: "5px" }}>Booking Error</h3>
+          <p className="mb-2" style={{ textAlign: "left" }}>
+            Error in booking. Please try again or call/email to book!
           </p>
         </div>
       );
