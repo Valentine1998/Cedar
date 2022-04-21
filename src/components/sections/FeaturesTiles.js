@@ -77,8 +77,7 @@ const FeaturesTiles = ({
                 home during the scheduled maintenance. We will either leave a receipt at your door or have it sent to you via email.
                 <br />
                 The day prior to your appointment we will contact you to remind you that we will be out the following day. Our technician
-                will pump your septic tanks completely and inspect the system to give a full report on the current condition of them. Your
-                report will also come with before and after pictures via text or email.
+                will pump your septic tanks completely and inspect the system to give a full report on the current condition of them.
                 <br />
                 At Cedar Septic and Sewer we follow all of the state guidelines very closely when it comes to the cleaning and disposal of
                 your system.

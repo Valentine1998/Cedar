@@ -61,7 +61,7 @@ const Pricing = ({
                       <h4 className="mt-0 pt-0 mb-8">Tanks and Their Size</h4>
                       <p style={{ fontSize: "18px" }}>
                         {" "}
-                        Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $295</span>
+                        Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $320</span>
                       </p>
                       <p style={{ fontSize: "18px" }}>
                         Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
