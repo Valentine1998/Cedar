@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
+import Map from "./Map";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -50,9 +51,10 @@ const ServiceArea = ({
       <div className="container" id="service-area">
         <div className={innerClasses}>
           <div data-reveal-value="20px" data-reveal-delay="800">
-            <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" style={{ margin: "auto" }} />
+            <Map />
+            {/*    <Image className="has-shadow" src={require("./../../assets/images/minn2.png")} alt="Hero" style={{ margin: "auto" }} /> */}
           </div>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content" style={{ marginTop: "30px" }} />
           <div style={{ marginTop: "0px" }} className="center-content">
             <div className="container-xs">
               <p style={{ marginTop: "-40px" }}>
