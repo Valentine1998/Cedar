@@ -12,14 +12,14 @@ const Map = ReactMapboxGl({
 
 const Map2 = () => {
   const [visible, setVisible] = useState(false);
-  const [center, setCenter] = useState([-93.6859, 45.7296]);
-  const [zoom, setZoom] = useState([7.0]);
+  const [center, setCenter] = useState([-93.0859, 45.6296]);
+  const [zoom, setZoom] = useState([6.0]);
   return (
     <div>
       <Map
         style="mapbox://styles/gunsojoe/cl3caqge2000014mrflhuui9j"
         containerStyle={{
-          height: "600px",
+          height: "500px",
           width: "100%",
           borderRadius: "6px",
         }}
