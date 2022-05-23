@@ -61,7 +61,7 @@ const FeaturesTiles = ({
               <p className="m-0" style={{ textAlign: "left" }}>
                 Your septic system is not designed to last forever, but regular pumping and maintenance can help to increase the longevity
                 of your drainfield. Keep your septic system healthy, and avoid the cost and headache of replacing it. The average cost of a
-                new septic system is <strong>$10,000</strong>.
+                new septic system is <strong>$16,000 - $20,000</strong>.
               </p>
               <p className="m-1" style={{ textAlign: "left" }}>
                 The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information
