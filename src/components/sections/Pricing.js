@@ -52,21 +52,21 @@ const Pricing = ({
       <div className="container" id="prices">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <div style={{ marginTop: "0px" }} className="center-content">
+          <div style={{ marginTop: "0px" }} className="left-content">
             <div>
               <div className={tilesClasses}>
-                <div className="tiles-item reveal-from-bottom">
+                <div className="tiles-item reveal-from-bottom pricing" style={{ flexBasis: "450px", maxWidth: "450px" }}>
                   <div className="tiles-item-inner">
                     <div className="features-tiles-item-content">
                       <h4 className="mt-0 pt-0 mb-8">Tanks and Their Size</h4>
-                      <p style={{ fontSize: "18px" }}>
+                      <p className="mt-3 mb-0">
                         {" "}
                         Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $320</span>
                       </p>
-                      <p style={{ fontSize: "18px" }}>
+                      <p className="mb-0">
                         Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
                       </p>
-                      <p style={{ fontSize: "18px" }}>
+                      <p className="mb-0">
                         Pump Tank <span style={{ color: "green" }}>= $25</span>
                       </p>
                     </div>

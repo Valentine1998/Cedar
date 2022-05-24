@@ -54,3 +54,46 @@ input[type="radio"]:checked:after {
   visibility: visible;
   border: 2px solid white;
 }
+
+@media (min-width: 998px) {
+  .container-md.mobile {
+    text-align: left;
+  }
+  .container-sm.mobile {
+    text-align: left;
+    margin-left: 0;
+  }
+  .container-xs.mobile {
+    margin-left: 0;
+  }
+  .mobile .center-content .button-group {
+    justify-content: left;
+  }
+  .mobile .button-group {
+    justify-content: left !important;
+  }
+  .mobile .button-group .btn1 {
+    margin: 8px;
+  }
+  .desktop-hide {
+    display: none;
+  }
+  .hero-image-desktop {
+    background: linear-gradient(to right, rgba(21, 23, 25, 1) 50%, rgba(21, 23, 25, 0.2)),
+      linear-gradient(rgba(21, 23, 25, 0.5), rgba(21, 23, 25, 0)), url("./assets/images/cool-truck.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .pricing p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 997px) {
+  .btn1 {
+    width: 100%;
+    margin: 8px;
+  }
+}

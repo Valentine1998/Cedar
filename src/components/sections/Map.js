@@ -19,7 +19,7 @@ const Map2 = () => {
       <Map
         style="mapbox://styles/gunsojoe/cl3caqge2000014mrflhuui9j"
         containerStyle={{
-          height: "500px",
+          height: "400px",
           width: "100%",
           borderRadius: "6px",
         }}

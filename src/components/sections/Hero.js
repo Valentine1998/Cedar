@@ -8,6 +8,7 @@ import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faDesktop } from "@fortawesome/free-solid-svg-icons";
+import truck from "./../../assets/images/cool-truck.png";
 
 const propTypes = {
   ...SectionProps.types,
@@ -42,14 +43,14 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
   const innerClasses = classNames("hero-inner section-inner", topDivider && "has-top-divider", bottomDivider && "has-bottom-divider");
 
   return (
-    <section {...props} className={outerClasses}>
-      <div className="container-sm">
+    <section {...props} className={outerClasses + " hero-image-desktop"}>
+      <div className="container-md mobile">
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               Cedar <span className="text-color-primary">Septic and Sewer</span>
             </h1>
-            <div className="container-xs">
+            <div className="container-xs mobile">
               <p className="m-0  reveal-from-bottom" data-reveal-delay="400">
                 Licensed – Bonded – Insured
                 <br />
@@ -62,9 +63,9 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               >
                 For regular maintenance and pumping, call, text or book online now. We are available 24/7 for septic emergencies.
               </p>
-              <div style={{ marginTop: "25px" }} className="reveal-from-bottom" data-reveal-delay="600">
+              <div style={{ marginTop: "25px" }} className="reveal-from-bottom mobile" data-reveal-delay="500">
                 <ButtonGroup>
-                  <Link style={{ width: "100%", margin: "8px" }} to="/booking">
+                  <Link className="btn1" to="/booking">
                     <Button tag="a" color="primary" wideMobile>
                       <FontAwesomeIcon style={{ marginTop: "3px" }} icon={faDesktop} />
                       &nbsp;Book Online
@@ -82,7 +83,11 @@ const Hero = ({ className, topOuterDivider, bottomOuterDivider, topDivider, bott
               </div>
             </div>
           </div>
-          <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
+          <div
+            className="desktop-hide hero-figure reveal-from-bottom illustration-element-01"
+            data-reveal-value="20px"
+            data-reveal-delay="500"
+          >
             <a data-video="https://player.vimeo.com/video/174002812">
               <Image className="has-shadow" src={require("./../../assets/images/truck.jpg")} alt="Hero" width={896} height={504} />
             </a>

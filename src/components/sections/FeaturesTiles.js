@@ -53,31 +53,33 @@ const FeaturesTiles = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div className="container no-padding">
         <div style={{ paddingTop: "0px" }} className={innerClasses}>
           <div className="center-content">
-            <div className="container-xs">
+            <div className="container-sm mobile">
               <h2>Why should you pump your septic system regularly?</h2>
               <p className="m-0" style={{ textAlign: "left" }}>
                 Your septic system is not designed to last forever, but regular pumping and maintenance can help to increase the longevity
                 of your drainfield. Keep your septic system healthy, and avoid the cost and headache of replacing it. The average cost of a
                 new septic system is <strong>$16,000 - $20,000</strong>.
               </p>
-              <p className="m-1" style={{ textAlign: "left" }}>
+              <p className="m-0" style={{ textAlign: "left" }}>
                 The Minnesota Pollution Control Agency recommends having your system pumped and inspected every 2 – 3 years. For information
                 on septic systems <a href="https://www.pca.state.mn.us/living-green/healthy-septic-systems">check this out</a>.
               </p>
             </div>
           </div>
           <div className="center-content">
-            <div className="container-xs">
+            <div className="container-sm mobile">
               <h2>Want to schedule a pumping? It’s simple!</h2>
               <p className="mb-3" style={{ textAlign: "left" }}>
                 Cedar Septic and Sewer wants to offer our clients the opportunity to book with us entirely online. You will not need to be
                 home during the scheduled maintenance. We will either leave a receipt at your door or have it sent to you via email.
                 <br />
+                <br />
                 The day prior to your appointment we will contact you to remind you that we will be out the following day. Our technician
                 will pump your septic tanks completely and inspect the system to give a full report on the current condition of them.
+                <br />
                 <br />
                 At Cedar Septic and Sewer we follow all of the state guidelines very closely when it comes to the cleaning and disposal of
                 your system.
