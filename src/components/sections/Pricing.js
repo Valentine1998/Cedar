@@ -64,7 +64,7 @@ const Pricing = ({
                         Tank 1 - 1000 gallons <span style={{ color: "green" }}>= $320</span>
                       </p>
                       <p className="mb-0">
-                        Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $85</span>
+                        Tank 2 - 1000 gallons <span style={{ color: "green" }}>+ $100</span>
                       </p>
                       <p className="mb-0">
                         Pump Tank <span style={{ color: "green" }}>= $25</span>
