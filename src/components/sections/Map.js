@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import ReactMapboxGl, { Layer, Feature, Marker, Popup, ZoomControl, ScaleControl } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import mapboxgl from "mapbox-gl";
+/* eslint import/no-webpack-loader-syntax: off */
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoiZ3Vuc29qb2UiLCJhIjoiY2wyMTE0NWhsMTFwbTNrbzVzcThwZmtmayJ9.ILs0HcbGfFwuk-dyaziyyw",
   doubleClickZoom: false,

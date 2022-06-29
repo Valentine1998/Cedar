@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.64b18b27.chunk.css",
-    "main.js": "/static/js/main.5bd477cd.chunk.js",
-    "main.js.map": "/static/js/main.5bd477cd.chunk.js.map",
+    "main.js": "/static/js/main.24ca829a.chunk.js",
+    "main.js.map": "/static/js/main.24ca829a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bf9f4589.js",
     "runtime-main.js.map": "/static/js/runtime-main.bf9f4589.js.map",
     "static/css/2.4a3545e4.chunk.css": "/static/css/2.4a3545e4.chunk.css",
-    "static/js/2.08748406.chunk.js": "/static/js/2.08748406.chunk.js",
-    "static/js/2.08748406.chunk.js.map": "/static/js/2.08748406.chunk.js.map",
+    "static/js/2.4add6330.chunk.js": "/static/js/2.4add6330.chunk.js",
+    "static/js/2.4add6330.chunk.js.map": "/static/js/2.4add6330.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.cacb65edd5398e44ca3c492862dc4839.js": "/precache-manifest.cacb65edd5398e44ca3c492862dc4839.js",
+    "precache-manifest.7ba205d6b46111d8f4b82d07dacf70a3.js": "/precache-manifest.7ba205d6b46111d8f4b82d07dacf70a3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.4a3545e4.chunk.css.map": "/static/css/2.4a3545e4.chunk.css.map",
     "static/css/main.64b18b27.chunk.css.map": "/static/css/main.64b18b27.chunk.css.map",
-    "static/js/2.08748406.chunk.js.LICENSE.txt": "/static/js/2.08748406.chunk.js.LICENSE.txt",
-    "static/js/main.5bd477cd.chunk.js.LICENSE.txt": "/static/js/main.5bd477cd.chunk.js.LICENSE.txt",
+    "static/js/2.4add6330.chunk.js.LICENSE.txt": "/static/js/2.4add6330.chunk.js.LICENSE.txt",
+    "static/js/main.24ca829a.chunk.js.LICENSE.txt": "/static/js/main.24ca829a.chunk.js.LICENSE.txt",
+    "static/js/mapbox-gl-csp-worker.d267901a.worker.js": "/static/js/mapbox-gl-csp-worker.d267901a.worker.js",
+    "static/js/mapbox-gl-csp-worker.d267901a.worker.js.map": "/static/js/mapbox-gl-csp-worker.d267901a.worker.js.map",
     "static/media/App.css": "/static/media/cool-truck.7c8c9169.png",
     "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
     "static/media/fam.jpeg": "/static/media/fam.0f119887.jpeg",
@@ -24,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.bf9f4589.js",
     "static/css/2.4a3545e4.chunk.css",
-    "static/js/2.08748406.chunk.js",
+    "static/js/2.4add6330.chunk.js",
     "static/css/main.64b18b27.chunk.css",
-    "static/js/main.5bd477cd.chunk.js"
+    "static/js/main.24ca829a.chunk.js"
   ]
 }
