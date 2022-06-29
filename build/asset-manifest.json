@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.64b18b27.chunk.css",
+    "main.js": "/static/js/main.8b5e48d9.chunk.js",
+    "main.js.map": "/static/js/main.8b5e48d9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf9f4589.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf9f4589.js.map",
+    "static/css/2.4a3545e4.chunk.css": "/static/css/2.4a3545e4.chunk.css",
+    "static/js/2.08748406.chunk.js": "/static/js/2.08748406.chunk.js",
+    "static/js/2.08748406.chunk.js.map": "/static/js/2.08748406.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.53ecc128c53a47a4dccce106fb21085d.js": "/precache-manifest.53ecc128c53a47a4dccce106fb21085d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.4a3545e4.chunk.css.map": "/static/css/2.4a3545e4.chunk.css.map",
+    "static/css/main.64b18b27.chunk.css.map": "/static/css/main.64b18b27.chunk.css.map",
+    "static/js/2.08748406.chunk.js.LICENSE.txt": "/static/js/2.08748406.chunk.js.LICENSE.txt",
+    "static/js/main.8b5e48d9.chunk.js.LICENSE.txt": "/static/js/main.8b5e48d9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/cool-truck.7c8c9169.png",
+    "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
+    "static/media/fam.jpeg": "/static/media/fam.0f119887.jpeg",
+    "static/media/logo.png": "/static/media/logo.7862b019.png",
+    "static/media/truck.jpg": "/static/media/truck.f440c067.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf9f4589.js",
+    "static/css/2.4a3545e4.chunk.css",
+    "static/js/2.08748406.chunk.js",
+    "static/css/main.64b18b27.chunk.css",
+    "static/js/main.8b5e48d9.chunk.js"
+  ]
+}
